@@ -1,27 +1,22 @@
-An example project for the [react-admin-firebase](https://github.com/benwinding/react-admin-firebase) package.
+# CazData Admin Panel
 
-# Demo
-Try the [demo here!](https://benwinding.github.io/react-admin-firebase-demo/#/login)
+Administration panel for the CazData app developed using [react-admin](https://github.com/marmelab/react-admin) with [react-admin-firebase](https://www.npmjs.com/package/react-admin-firebase)
 
-```
-username: test@example.com
-password: password
-```
+## Get started
 
-# Get started
 You need to add the private Firebase connection file: `src/FIREBASE_CONFIG.js` with the following format from firebase:
 
-``` js
+```js
 export const firebaseConfig = {
-  apiKey: "aaaaaaaaaaaaaaaaaaaaaaaaaaa",
-  authDomain: "aaaaaaaaaaaaaaaaaaaaaaaaaaa",
-  databaseURL: "aaaaaaaaaaaaaaaaaaaaaaaaaaa",
-  projectId: "aaaaaaaaaaaaaaaaaaaaaaaaaaa",
-  storageBucket: "aaaaaaaaaaaaaaaaaaaaaaaaaaa",
-  messagingSenderId: "aaaaaaaaaaaaaaaaaaaaaaaaaaa",
+  apiKey: 'aaaaaaaaaaaaaaaaaaaaaaaaaaa',
+  authDomain: 'aaaaaaaaaaaaaaaaaaaaaaaaaaa',
+  databaseURL: 'aaaaaaaaaaaaaaaaaaaaaaaaaaa',
+  projectId: 'aaaaaaaaaaaaaaaaaaaaaaaaaaa',
+  storageBucket: 'aaaaaaaaaaaaaaaaaaaaaaaaaaa',
+  messagingSenderId: 'aaaaaaaaaaaaaaaaaaaaaaaaaaa',
 };
 ```
 
-Don't forget to add the `export` infront of the configuration that Firebase gives you!
+Don't forget to add the `export` in front of the configuration that Firebase gives you!
 
-Then just run `npm run start`
+Then just run `yarn start`
