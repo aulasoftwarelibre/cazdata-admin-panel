@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { SelectArrayInput } from 'react-admin'
 import {
   BooleanField,
   BooleanInput,
@@ -58,7 +59,10 @@ export const AnimalEdit = (props) => (
     <SimpleForm redirect="show">
       <TextInput disabled source="id" />
       <TextInput source="name" />
-      <TextInput source="type" />
+      <SelectArrayInput label='types' source="type" choices={[
+        { id: 'major', name: 'Major'},
+        { id: 'menor', name: 'Menor'},
+      ]} />
       <BooleanInput source="isEnabled" />
       <FileInput source="image" label="Image" accept="image/*">
         <ImageField source="src" title="image" />
@@ -71,7 +75,10 @@ export const AnimalCreate = (props) => (
   <Create {...props}>
     <SimpleForm>
       <TextInput source="name" />
-      <TextInput source="type" />
+      <SelectArrayInput label='types' source="type" choices={[
+        { id: 'major', name: 'Major'},
+        { id: 'menor', name: 'Menor'},
+      ]} />
       <BooleanInput source="isEnabled" />
       <FileInput source="image" label="Image" accept="image/*">
         <ImageField source="src" title="image" />
