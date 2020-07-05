@@ -1,12 +1,9 @@
 import * as React from 'react';
 import { Admin, Resource } from 'react-admin';
-import {
-  FirebaseDataProvider,
-  FirebaseAuthProvider,
-} from 'react-admin-firebase';
-import CustomLoginPage from './CustomLoginPage';
-import { AnimalList, AnimalShow, AnimalEdit, AnimalCreate } from './animals';
+import { FirebaseAuthProvider, FirebaseDataProvider } from 'react-admin-firebase';
 
+import { AnimalCreate, AnimalEdit, AnimalList, AnimalShow } from './animals';
+import CustomLoginPage from './CustomLoginPage';
 import { firebaseConfig as config } from './FIREBASE_CONFIG';
 
 const options = {

@@ -1,8 +1,8 @@
 // LoginPage.js
+import firebase from 'firebase';
 import React from 'react';
 import { Login } from 'react-admin';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
-import firebase from 'firebase';
 
 const uiConfig = {
   signInFlow: 'popup',

@@ -1,24 +1,22 @@
-// in src/posts.js
 import * as React from 'react';
-// tslint:disable-next-line:no-var-requires
 import {
+  BooleanField,
+  BooleanInput,
+  Create,
   Datagrid,
+  DeleteButton,
+  Edit,
+  EditButton,
+  FileInput,
+  Filter,
+  ImageField,
   List,
   Show,
-  Create,
-  Edit,
-  Filter,
-  SimpleShowLayout,
+  ShowButton,
   SimpleForm,
+  SimpleShowLayout,
   TextField,
   TextInput,
-  ShowButton,
-  EditButton,
-  DeleteButton,
-  BooleanField,
-  FileInput,
-  ImageField,
-  BooleanInput,
 } from 'react-admin';
 
 const AnimalFilter = (props) => (
