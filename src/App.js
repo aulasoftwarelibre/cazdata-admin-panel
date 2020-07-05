@@ -1,10 +1,15 @@
-import * as React from 'react';
-import { Admin, Resource } from 'react-admin';
-import { FirebaseAuthProvider, FirebaseDataProvider } from 'react-admin-firebase';
+import * as React from "react";
+import { Admin, Resource } from "react-admin";
+import {
+  FirebaseAuthProvider,
+  FirebaseDataProvider,
+} from "react-admin-firebase";
 
-import { AnimalCreate, AnimalEdit, AnimalList, AnimalShow } from './animals';
-import CustomLoginPage from './CustomLoginPage';
-import { firebaseConfig as config } from './FIREBASE_CONFIG';
+import { AnimalCreate, AnimalEdit, AnimalList, AnimalShow } from "./animals";
+import { JourneyList, JourneyShow, JourneyEdit, JourneyCreate } from "./journeys";
+import { HuntModalityList, HuntModalityShow, HuntModalityEdit, HuntModalityCreate } from "./huntModalities";
+import CustomLoginPage from "./CustomLoginPage";
+import { firebaseConfig as config } from "./FIREBASE_CONFIG";
 
 const options = {
   logging: true,
@@ -26,6 +31,20 @@ class App extends React.Component {
           show={AnimalShow}
           edit={AnimalEdit}
           create={AnimalCreate}
+        />
+        <Resource
+          name="journeys"
+          list={JourneyList}
+          show={JourneyShow}
+          edit={JourneyEdit}
+          create={JourneyCreate}
+        />
+        <Resource
+          name="huntModalities"
+          list={HuntModalityList}
+          show={HuntModalityShow}
+          edit={HuntModalityEdit}
+          create={HuntModalityCreate}
         />
       </Admin>
     );
