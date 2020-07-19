@@ -1,15 +1,12 @@
-import * as React from "react";
-import { Admin, Resource } from "react-admin";
-import {
-  FirebaseAuthProvider,
-  FirebaseDataProvider,
-} from "react-admin-firebase";
+import * as React from 'react';
+import { Admin, Resource } from 'react-admin';
+import { FirebaseAuthProvider, FirebaseDataProvider } from 'react-admin-firebase';
 
-import { AnimalCreate, AnimalEdit, AnimalList, AnimalShow } from "./animals";
-import { JourneyList, JourneyShow, JourneyEdit, JourneyCreate } from "./journeys";
-import { HuntModalityList, HuntModalityShow, HuntModalityEdit, HuntModalityCreate } from "./huntModalities";
-import CustomLoginPage from "./CustomLoginPage";
-import { firebaseConfig as config } from "./FIREBASE_CONFIG";
+import { AnimalCreate, AnimalEdit, AnimalList, AnimalShow } from './animals';
+import CustomLoginPage from './CustomLoginPage';
+import { firebaseConfig as config } from './FIREBASE_CONFIG';
+import { JourneyCreate, JourneyEdit, JourneyList, JourneyShow } from './journeys';
+import { ModalitiesCreate, ModalitiesEdit, ModalitiesList, ModalitiesShow } from './modalities';
 
 const options = {
   logging: true,
@@ -33,18 +30,18 @@ class App extends React.Component {
           create={AnimalCreate}
         />
         <Resource
+          name="modalities"
+          list={ModalitiesList}
+          show={ModalitiesShow}
+          edit={ModalitiesEdit}
+          create={ModalitiesCreate}
+        />
+        <Resource
           name="journeys"
           list={JourneyList}
           show={JourneyShow}
           edit={JourneyEdit}
           create={JourneyCreate}
-        />
-        <Resource
-          name="huntModalities"
-          list={HuntModalityList}
-          show={HuntModalityShow}
-          edit={HuntModalityEdit}
-          create={HuntModalityCreate}
         />
       </Admin>
     );
