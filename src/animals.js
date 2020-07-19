@@ -63,8 +63,8 @@ export const AnimalEdit = (props) => (
         label="Tipo"
         source="type"
         choices={[
-          { id: 'major', name: 'Mayor' },
-          { id: 'minor', name: 'Menor' },
+          { id: 'Mayor', name: 'Mayor' },
+          { id: 'Menor', name: 'Menor' },
         ]}
       />
       <BooleanInput source="isEnabled" />
@@ -83,8 +83,8 @@ export const AnimalCreate = (props) => (
         label="Tipo"
         source="type"
         choices={[
-          { id: 'major', name: 'Mayor' },
-          { id: 'minor', name: 'Menor' },
+          { id: 'Mayor', name: 'Mayor' },
+          { id: 'Menor', name: 'Menor' },
         ]}
       />
       <BooleanInput source="isEnabled" />
