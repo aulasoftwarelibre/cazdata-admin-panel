@@ -1,5 +1,4 @@
 import * as React from 'react';
-import { SelectArrayInput } from 'react-admin'
 import {
   BooleanField,
   BooleanInput,
@@ -12,6 +11,7 @@ import {
   Filter,
   ImageField,
   List,
+  SelectInput,
   Show,
   ShowButton,
   SimpleForm,
@@ -29,11 +29,11 @@ const AnimalFilter = (props) => (
 export const AnimalList = (props) => (
   <List {...props} filters={<AnimalFilter />}>
     <Datagrid>
-      <TextField source="name" />
-      <TextField source="type" />
-      <BooleanField source="isEnabled" />
-      <TextField source="createdate" />
-      <TextField source="lastupdate" />
+      <TextField label="Nombre" source="name" />
+      <TextField label="Tipo" source="type" />
+      <BooleanField label="Habilitado" source="isEnabled" />
+      <TextField label="Fecha de Creación" source="createdate" />
+      <TextField label="Última Fecha de Modificación" source="lastupdate" />
       <ShowButton label="" />
       <EditButton label="" />
       <DeleteButton label="" redirect={false} />
@@ -44,12 +44,12 @@ export const AnimalList = (props) => (
 export const AnimalShow = (props) => (
   <Show {...props}>
     <SimpleShowLayout>
-      <TextField source="name" />
-      <TextField source="type" />
-      <BooleanField source="isEnabled" />
-      <TextField source="createdate" />
-      <TextField source="lastupdate" />
-      <ImageField source="image.src" title="image.image" />
+      <TextField label="Nombre" source="name" />
+      <TextField label="Tipo" source="type" />
+      <BooleanField label="Habilitado" source="isEnabled" />
+      <TextField label="Fecha de Creación" source="createdate" />
+      <TextField label="Última Fecha de Modificación" source="lastupdate" />
+      <ImageField label="Imagen" source="image.src" title="image.image" />
     </SimpleShowLayout>
   </Show>
 );
@@ -58,13 +58,17 @@ export const AnimalEdit = (props) => (
   <Edit {...props}>
     <SimpleForm redirect="show">
       <TextInput disabled source="id" />
-      <TextInput source="name" />
-      <SelectArrayInput label='types' source="type" choices={[
-        { id: 'major', name: 'Major'},
-        { id: 'menor', name: 'Menor'},
-      ]} />
+      <TextInput label="Nombre" source="name" />
+      <SelectInput
+        label="Tipo"
+        source="type"
+        choices={[
+          { id: 'major', name: 'Mayor' },
+          { id: 'minor', name: 'Menor' },
+        ]}
+      />
       <BooleanInput source="isEnabled" />
-      <FileInput source="image" label="Image" accept="image/*">
+      <FileInput source="image" label="Imagen" accept="image/*">
         <ImageField source="src" title="image" />
       </FileInput>
     </SimpleForm>
@@ -74,13 +78,17 @@ export const AnimalEdit = (props) => (
 export const AnimalCreate = (props) => (
   <Create {...props}>
     <SimpleForm>
-      <TextInput source="name" />
-      <SelectArrayInput label='types' source="type" choices={[
-        { id: 'major', name: 'Major'},
-        { id: 'menor', name: 'Menor'},
-      ]} />
+      <TextInput label="Nombre" source="name" />
+      <SelectInput
+        label="Tipo"
+        source="type"
+        choices={[
+          { id: 'major', name: 'Mayor' },
+          { id: 'minor', name: 'Menor' },
+        ]}
+      />
       <BooleanInput source="isEnabled" />
-      <FileInput source="image" label="Image" accept="image/*">
+      <FileInput source="image" label="Imagen" accept="image/*">
         <ImageField source="src" title="image" />
       </FileInput>
     </SimpleForm>
