@@ -1,12 +1,25 @@
 import * as React from 'react';
 import { Admin, Resource } from 'react-admin';
-import { FirebaseAuthProvider, FirebaseDataProvider } from 'react-admin-firebase';
+import {
+  FirebaseAuthProvider,
+  FirebaseDataProvider,
+} from 'react-admin-firebase';
 
 import { AnimalCreate, AnimalEdit, AnimalList, AnimalShow } from './animals';
 import CustomLoginPage from './CustomLoginPage';
 import { firebaseConfig as config } from './FIREBASE_CONFIG';
-import { JourneyCreate, JourneyEdit, JourneyList, JourneyShow } from './journeys';
-import { ModalitiesCreate, ModalitiesEdit, ModalitiesList, ModalitiesShow } from './modalities';
+import {
+  JourneyCreate,
+  JourneyEdit,
+  JourneyList,
+  JourneyShow,
+} from './journeys';
+import {
+  ModalitiesCreate,
+  ModalitiesEdit,
+  ModalitiesList,
+  ModalitiesShow,
+} from './modalities';
 
 const options = {
   logging: true,

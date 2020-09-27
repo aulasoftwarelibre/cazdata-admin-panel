@@ -7,9 +7,9 @@ import {
   DeleteButton,
   Edit,
   EditButton,
-  FileInput,
   Filter,
   ImageField,
+  ImageInput,
   List,
   SelectInput,
   Show,
@@ -58,8 +58,8 @@ export const AnimalEdit = (props) => (
   <Edit {...props}>
     <SimpleForm redirect="show">
       <TextInput disabled source="id" />
-      <TextInput label="Nombre" source="name" />
-      <SelectInput
+      <TextInput fullWidth label="Nombre" source="name" />
+      <SelectInput fullWidth
         label="Tipo"
         source="type"
         choices={[
@@ -68,9 +68,10 @@ export const AnimalEdit = (props) => (
         ]}
       />
       <BooleanInput source="isEnabled" />
-      <FileInput source="image" label="Imagen" accept="image/*">
+      <ImageInput source="image" label="Imagen" accept="image/*">
         <ImageField source="src" title="image" />
-      </FileInput>
+      </ImageInput>
+      <TextInput fullWidth multiline label="Atribución" source="attribution" />
     </SimpleForm>
   </Edit>
 );
@@ -78,8 +79,8 @@ export const AnimalEdit = (props) => (
 export const AnimalCreate = (props) => (
   <Create {...props}>
     <SimpleForm>
-      <TextInput label="Nombre" source="name" />
-      <SelectInput
+      <TextInput fullWidth label="Nombre" source="name" />
+      <SelectInput fullWidth
         label="Tipo"
         source="type"
         choices={[
@@ -88,9 +89,10 @@ export const AnimalCreate = (props) => (
         ]}
       />
       <BooleanInput source="isEnabled" />
-      <FileInput source="image" label="Imagen" accept="image/*">
+      <ImageInput source="image" label="Imagen" accept="image/*">
         <ImageField source="src" title="image" />
-      </FileInput>
+      </ImageInput>
+      <TextInput fullWidth multiline label="Atribución" source="attribution" />
     </SimpleForm>
   </Create>
 );
